@@ -5,7 +5,7 @@
 @description    This user style changes the look of the current HTML 5 Player to look more like the Flash Player/2012 HTML 5 Player
 @version        5.0
 @license        CC0-1.0
-@advanced dropdown black-white "Colors" {
+@advanced dropdown black-white "Colors"{
 	black "Dark (Default)*" <<<EOT
 
         .ytp-chrome-controls {
