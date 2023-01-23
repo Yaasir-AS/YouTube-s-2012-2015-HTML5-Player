@@ -4,7 +4,7 @@
 @author         yaasir ahmad-sanni (naadir500)
 @updateURL      https://github.com/Yaasir-AS/YouTube-s-2012-2015-HTML5-Player/raw/main/YouTube's2012-2015HTML5Player.user.css
 @description    This user style changes the look of the current HTML 5 Player to look more like the Flash Player/2012 HTML 5 Player
-@version        5.2
+@version        5.2.1
 @license        CC0-1.0
 @advanced dropdown black-white "Colors" {
 	black "Dark (Default)*" <<<EOT
@@ -921,5 +921,15 @@ white "Light" <<<EOT
         line-height: 18px;
         width: 280% !important;
         left: -80px;
+    }
+    
+    /* Tooltip on Big Mode */
+    
+    .ytp-big-mode .ytp-preview:not(.ytp-text-detail) .ytp-tooltip-text {
+        top: 4px;
+    }
+    
+    .ytp-big-mode .ytp-tooltip.ytp-bottom.ytp-preview {
+        top: 22.5rem !important;
     }
 }
