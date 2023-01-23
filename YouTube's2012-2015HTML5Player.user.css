@@ -4,7 +4,7 @@
 @author         yaasir ahmad-sanni (naadir500)
 @updateURL      https://github.com/Yaasir-AS/YouTube-s-2012-2015-HTML5-Player/raw/main/YouTube's2012-2015HTML5Player.user.css
 @description    This user style changes the look of the current HTML 5 Player to look more like the Flash Player/2012 HTML 5 Player
-@version        5.1
+@version        5.2
 @license        CC0-1.0
 @advanced dropdown black-white "Colors" {
 	black "Dark (Default)*" <<<EOT
@@ -614,6 +614,13 @@ white "Light" <<<EOT
     
     .ytp-chapter-hover-container {
         width: 100% !important;
+    } 
+    
+        /* Chapters might function differently */
+    
+    .ytp-chapters-container {
+        display: flex;
+        justify-content: space-between;
     }
 
     /* Volume Slider */
@@ -723,6 +730,29 @@ white "Light" <<<EOT
         background: #bdbdbd !important;
     }
     
+    /* Right Click Menu */
+    
+    .ytp-contextmenu {
+        background: #fff;
+        
+    }
+    
+    .ytp-contextmenu .ytp-menuitem:hover {
+        background-color: #e3e3e3 !important;
+    }
+    
+    .ytp-popup {
+        text-shadow: 0 0 0px rgba(0,0,0,0);
+    }
+    
+    .ytp-contextmenu .ytp-menuitem-label {
+        color: #333 !important;
+        padding-left: 20px;
+    }
+    
+    .ytp-menuitem-icon {
+        display: none;
+    }
 
     /* I think what I did for the previous two are good enough.. off to Fullscreen Mode */
     .ytp-big-mode .ytp-chrome-top .ytp-button,
@@ -839,5 +869,57 @@ white "Light" <<<EOT
     .ytp-cued-thumbnail-overlay:hover .ytp-large-play-button-bg {
         fill: #dd0a14;
         transition: none;
+    }
+    
+    /* Tooltip */
+    
+    .ytp-preview:not(.ytp-text-detail) .ytp-tooltip-text {
+        top: 3px;
+        font-size: 10px;
+    }
+    
+    .ytp-preview .ytp-tooltip-text-wrapper {
+        background: #1f1f1fcc;
+        line-height: 0;
+        height: 1.7rem;
+        border-radius: 0;
+    }
+    
+    .ytp-tooltip.ytp-bottom.ytp-preview {
+        background: #1f1f1fcc;
+        border-radius: 0;
+        width: 88px;
+        padding: 0px 0px 0px 0px;
+        top: 15.5rem !important;
+    }
+    
+    .ytp-tooltip.ytp-preview:not(.ytp-text-detail) .ytp-tooltip-text-wrapper {
+        bottom: -13px;
+        height: 13px !important;
+    }
+    
+    .ytp-tooltip-bg {
+        width: 81px !important;
+        height: 45px !important;
+        background-size: 400px !important;
+        margin: 4px;
+    }
+    
+    .ytp-preview .ytp-tooltip-text-wrapper::before {
+        content: '';
+        border-top: 5px solid rgba(31, 31, 31, 0.8);
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        bottom: -5px;
+        position: absolute;
+        left: 40px;
+    }
+    
+    .ytp-tooltip-title {
+        position: absolute !important;
+        top: -70px !important;
+        line-height: 18px;
+        width: 280% !important;
+        left: -80px;
     }
 }
